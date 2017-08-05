@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: DrugDiseaseNet.aux
+The style file: abbrv.bst
+Database file #1: DrugDiseaseNet.bib.bib
+You've used 5 entries,
+            2118 wiz_defined-function locations,
+            534 strings with 4841 characters,
+and the built_in function-call counts, 1953 in all, are:
+= -- 182
+> -- 134
+< -- 0
++ -- 55
+- -- 48
+* -- 166
+:= -- 349
+add.period$ -- 15
+call.type$ -- 5
+change.case$ -- 39
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 50
+empty$ -- 119
+format.name$ -- 48
+if$ -- 374
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 3
+newline$ -- 28
+num.names$ -- 10
+pop$ -- 32
+preamble$ -- 1
+purify$ -- 34
+quote$ -- 0
+skip$ -- 34
+stack$ -- 0
+substring$ -- 114
+swap$ -- 5
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 20
+warning$ -- 0
+while$ -- 16
+width$ -- 6
+write$ -- 56
