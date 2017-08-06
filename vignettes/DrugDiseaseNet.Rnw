@@ -172,5 +172,5 @@ is discussed in the manuscript which is in
 the publication process.
 
 \bibliographystyle{abbrv}
-\bibliography{DrugDiseaseNet.bib}
+\bibliography{DrugDiseaseNet}
 \end{document}

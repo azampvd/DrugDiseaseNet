@@ -5,7 +5,7 @@
 \title{keggGlobalGraph: Construct global graph of KEGG signaling pathways.}
 \usage{
 updateGlobalGraph(globalGraph, edgesToremove = list(c("hsa:6657",
-  "hsa:79923")))
+"hsa:79923")))
 }
 \arguments{
 \item{globalGraph}{KEGG global graph as object of type
