@@ -5,7 +5,7 @@ Title: A Systems Biology Approach for Drug Repurposing
 Suggests: RUnit,BiocGenerics,
     knitr,
     rmarkdown
-Version: 0.99.0
+Version: 0.99.1
 Author: Azam Peyvandipour, Sorin Draghici
 Maintainer: Azam Peyvandipour <azam.peyvandipour@wayne.edu>
 Description: Generates a drug-disease network (DDN) composed of the genes that are most likely perturbed by a drug. By performing a system-level analysis on this network using disease gene expression signatures and drug-exposure gene expression signatures, the amount of perturbation caused by a drug on the genes can be estimated. This can help to identify the associations to a disease of interest.
