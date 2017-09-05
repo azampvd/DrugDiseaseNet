@@ -24,6 +24,8 @@ See cited document for more details.
 }
 \examples{
 pathways<-nodeData_keggPathwaygraphs(node="hsa:208",updateKEGG=FALSE)
+class(pathways)
+head(pathways)
 }
 \seealso{
 \code{\link{keggPathwayGraphs},\link{keggPathwayNames}}

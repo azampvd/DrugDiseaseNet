@@ -19,8 +19,13 @@ global graph information.
 keggGlobalGraph: Construct global graph of KEGG pathways.
 }
 \examples{
+library(graph)
 gg<-keggGlobalGraph()
-
+class(gg)
+head(nodes(gg))
+class(edges(gg))
+allEdges<-edges(gg)
+allEdges$`hsa:2065`
 }
 \references{
 #' Draghici S., et.al.: "A systems biology approach for

@@ -22,8 +22,13 @@
 #' \code{\link{keggPathwayNames}}
 #'
 #' @examples
+#' library(graph)
 #' gg<-keggGlobalGraph()
-#'
+#' class(gg)
+#' head(nodes(gg))
+#' class(edges(gg))
+#' allEdges<-edges(gg)
+#' allEdges$`hsa:2065`
 #' @import ROntoTools
 #' @import graph
 #' @export
@@ -118,7 +123,18 @@ calculate.B <- function(g, non.zero=TRUE){
 #' pathway level analysis". Genome Research, 17, 2007.
 #'
 #' @seealso \code{\link{keggPathwayGraphs}}, \code{\link{keggGlobalGraph}}
+#' @examples
+#' library(graph)
+#' gg<-keggGlobalGraph()
+#' class(edges(gg))
+#' length(unlist(edges(gg)))
+#' allEdges<-edges(gg)
+#' allEdges$`hsa:2065`
+#' ggUpdated<-updateGlobalGraph(gg,edgesToremove=
+#' list(c("hsa:2065","hsa:2549"),c("hsa:2065","hsa:25759")))
+#' length(unlist(edges(ggUpdated)))
 #' @import graph
+#' @export
     updateGlobalGraph <- function(globalGraph,edgesToremove=
     list(c("hsa:6657","hsa:79923"))){
 

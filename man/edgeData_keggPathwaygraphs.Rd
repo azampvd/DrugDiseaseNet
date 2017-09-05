@@ -5,18 +5,18 @@
 \title{utils: utility functions
 names in which there is an edge between the given nodes}
 \usage{
-edgeData_keggPathwaygraphs(edge_from, edge_to, updateKEGG = FALSE)
+edgeData_keggPathwaygraphs(edgeFrom, edgeTo, updateKEGG = FALSE)
 }
 \arguments{
-\item{edge_from}{A character of node name}
+\item{edgeFrom}{A character of node name}
 
-\item{edge_to}{A character of node name}
+\item{edgeTo}{A character of node name}
 
 \item{updateKEGG}{re-download KEGG data}
 }
 \value{
 A character vector of KEGG pathway names in which
-edge (from_node, to_node) exists
+edge (edgeFrom, edgeTo) exists
 }
 \description{
 utils: utility functions
@@ -27,8 +27,10 @@ names in which there is an edge between the given nodes
 pathway level analysis". Genome Research, 17, 2007.
 }
 \examples{
-pathways<-edgeData_keggPathwaygraphs(edge_from="hsa:208",
-edge_to="hsa:2309",updateKEGG=FALSE)
+pathways<-edgeData_keggPathwaygraphs(edgeFrom="hsa:208",
+edgeTo="hsa:2309",updateKEGG=FALSE)
+class(pathways)
+head(pathways)
 }
 \seealso{
 \code{\link{keggPathwayGraphs},\link{keggPathwayNames}}

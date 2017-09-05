@@ -5,7 +5,7 @@
 \title{keggGlobalGraph: Construct global graph of KEGG signaling pathways.}
 \usage{
 updateGlobalGraph(globalGraph, edgesToremove = list(c("hsa:6657",
-"hsa:79923")))
+  "hsa:79923")))
 }
 \arguments{
 \item{globalGraph}{KEGG global graph as object of type
@@ -23,6 +23,17 @@ keggGlobalGraph: Construct global graph of KEGG signaling pathways.
 }
 \details{
 See cited document for more details.
+}
+\examples{
+library(graph)
+gg<-keggGlobalGraph()
+class(edges(gg))
+length(unlist(edges(gg)))
+allEdges<-edges(gg)
+allEdges$`hsa:2065`
+ggUpdated<-updateGlobalGraph(gg,edgesToremove=
+list(c("hsa:2065","hsa:2549"),c("hsa:2065","hsa:25759")))
+length(unlist(edges(ggUpdated)))
 }
 \references{
 #' Draghici S., et.al.: "A systems biology approach for

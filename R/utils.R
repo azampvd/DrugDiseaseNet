@@ -2,8 +2,8 @@
 #' names in which there is an edge between the given nodes
 #'
 #' @param updateKEGG re-download KEGG data
-#' @param edge_from A character of node name
-#' @param edge_to A character of node name
+#' @param edgeFrom A character of node name
+#' @param edgeTo A character of node name
 #'
 #' @details
 #'
@@ -13,7 +13,7 @@
 #' @return
 #'
 #' A character vector of KEGG pathway names in which
-#' edge (from_node, to_node) exists
+#' edge (edgeFrom, edgeTo) exists
 #'
 #' @author
 #'
@@ -23,12 +23,14 @@
 #' @seealso \code{\link{keggPathwayGraphs},\link{keggPathwayNames}}
 #'
 #' @examples
-#'pathways<-edgeData_keggPathwaygraphs(edge_from="hsa:208",
-#'edge_to="hsa:2309",updateKEGG=FALSE)
+#'pathways<-edgeData_keggPathwaygraphs(edgeFrom="hsa:208",
+#'edgeTo="hsa:2309",updateKEGG=FALSE)
+#'class(pathways)
+#'head(pathways)
 #' @import graph
 #' @import ROntoTools
 #' @export
-edgeData_keggPathwaygraphs<-function(edge_from,edge_to,updateKEGG=FALSE)
+edgeData_keggPathwaygraphs<-function(edgeFrom,edgeTo,updateKEGG=FALSE)
     {
 
 
@@ -46,9 +48,9 @@ edgeData_keggPathwaygraphs<-function(edge_from,edge_to,updateKEGG=FALSE)
 
     edgeExist<-unlist(sapply(kpg_matrix,function(x)
         {
-        if(all(c(edge_from,edge_to) %in% rownames(x)))
+        if(all(c(edgeFrom,edgeTo) %in% rownames(x)))
             {
-            if(x[edge_from,edge_to]!=0)
+            if(x[edgeFrom,edgeTo]!=0)
                 return(TRUE)
             }
         else
@@ -57,7 +59,7 @@ edgeData_keggPathwaygraphs<-function(edge_from,edge_to,updateKEGG=FALSE)
 
     res<-kpgN[names(edgeExist)[which(edgeExist)]]
     if(!length(res))
-        stop(paste("The edge (",edge_from," , " ,edge_to,")
+        stop(paste("The edge (",edgeFrom," , " ,edgeTo,")
             does not belong to KEGG pathways",sep=""))
         else
         return(res)
@@ -87,6 +89,8 @@ edgeData_keggPathwaygraphs<-function(edge_from,edge_to,updateKEGG=FALSE)
 #'
 #' @examples
 #'pathways<-nodeData_keggPathwaygraphs(node="hsa:208",updateKEGG=FALSE)
+#'class(pathways)
+#'head(pathways)
 #' @import graph
 #' @import ROntoTools
 #' @export

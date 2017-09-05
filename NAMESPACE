@@ -1,5 +1,6 @@
 export(keggGlobalGraph)
 export(shortestPathsGraph)
+export(updateGlobalGraph)
 export(edgeData_keggPathwaygraphs)
 export(nodeData_keggPathwaygraphs)
 import(ROntoTools)
