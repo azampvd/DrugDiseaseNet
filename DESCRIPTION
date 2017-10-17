@@ -4,7 +4,7 @@ Imports: ROntoTools,igraph,graph,methods,stringr
 Title: A Systems Biology Approach for Drug Repurposing
 Suggests: RUnit,BiocGenerics,
     knitr,
-    rmarkdown
+    rmarkdown, BiocStyle
 Version: 0.99.3
 Author: Azam Peyvandipour, Sorin Draghici
 Maintainer: Azam Peyvandipour <azam.peyvandipour@wayne.edu>
